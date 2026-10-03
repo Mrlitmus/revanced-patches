@@ -1968,6 +1968,8 @@ API キーを取得するには、ここをタップしてください。"</stri
     <string name="revanced_preference_screen_snack_bar_summary">スナックバー (画質を変更した時などに下部に表示される白いバー) に関連するコンポーネントを非表示または変更します。</string>
     <string name="revanced_preference_screen_snack_bar_title">スナックバー</string>
     <string name="revanced_preference_screen_swipe_controls_title">スワイプコントロール</string>
+    <string name="revanced_preference_screen_text_translation_summary">コメントと動画の概要を自動翻訳し、コピー用リンクを追加します。</string>
+    <string name="revanced_preference_screen_text_translation_title">コメントと概要を翻訳</string>
     <string name="revanced_preference_screen_toolbar_summary">ヘッダー、検索バー、ツールバーボタンなどのツールバーコンポーネントを非表示または変更できます。</string>
     <string name="revanced_preference_screen_toolbar_title">ツールバー</string>
     <string name="revanced_preference_screen_video_description_summary">概要欄のコンポーネントを非表示または表示します。</string>
@@ -2709,6 +2711,32 @@ JavaScript クライアントの中では、「TV Simply」が推奨されます
     <string name="revanced_switch_create_with_notifications_button_summary_on">[作成] ボタンと [通知] ボタンを入れ替えます。</string>
     <string name="revanced_switch_create_with_notifications_button_title">[作成] ボタンと [通知] ボタンを入れ替え</string>
     <string name="revanced_switch_create_with_notifications_button_user_dialog_message">この設定が有効にならない場合は、シークレットモードに切り替えてみてください。</string>
+    <string name="revanced_text_translation_about_summary">"テキストは Google 翻訳の公開エンドポイントで翻訳されるため、ネットワーク接続が必要です。
+
+元の言語は自動検出され、既に翻訳先の言語で書かれたテキストはそのまま表示されます。
+
+翻訳したテキストと長いテキストの下に、タップでコピーできるリンクが追加されます。"</string>
+    <string name="revanced_text_translation_about_title">翻訳について</string>
+    <string name="revanced_text_translation_comments_show_original_summary_off">翻訳のみ表示します。「原文」をタップすると原文を確認できます。</string>
+    <string name="revanced_text_translation_comments_show_original_summary_on">翻訳の上に原文を表示します。</string>
+    <string name="revanced_text_translation_comments_show_original_title">コメントの原文も表示</string>
+    <string name="revanced_text_translation_comments_summary_off">コメントを投稿されたまま表示します。</string>
+    <string name="revanced_text_translation_comments_summary_on">他の言語のコメントを翻訳して表示します。</string>
+    <string name="revanced_text_translation_comments_title">コメントを翻訳</string>
+    <string name="revanced_text_translation_copied">テキストをクリップボードにコピーしました</string>
+    <string name="revanced_text_translation_copy">コピー</string>
+    <string name="revanced_text_translation_copy_button_summary_off">コピー用リンクを表示しません。</string>
+    <string name="revanced_text_translation_copy_button_summary_on">翻訳したテキストと長いテキストの下にコピー用リンクを表示します。</string>
+    <string name="revanced_text_translation_copy_button_title">コピー用リンクを表示</string>
+    <string name="revanced_text_translation_description_show_original_summary_off">翻訳のみ表示します。「原文」をタップすると原文を確認できます。</string>
+    <string name="revanced_text_translation_description_show_original_summary_on">翻訳の上に原文を表示します。リンクやタイムスタンプはそのまま使えます。</string>
+    <string name="revanced_text_translation_description_show_original_title">概要の原文も表示</string>
+    <string name="revanced_text_translation_description_summary_off">概要を投稿されたまま表示します。</string>
+    <string name="revanced_text_translation_description_summary_on">他の言語の概要を翻訳して表示します。</string>
+    <string name="revanced_text_translation_description_title">動画の概要を翻訳</string>
+    <string name="revanced_text_translation_original_dialog_title">原文</string>
+    <string name="revanced_text_translation_show_original">原文</string>
+    <string name="revanced_text_translation_target_language_title">翻訳先の言語</string>
     <string name="revanced_transcript_cookies_about_summary">Cookie を取得する方法を確認するにはここをタップしてください。</string>
     <string name="revanced_transcript_cookies_about_title">Transcript Cookie について</string>
     <string name="revanced_transcript_cookies_dialog_auth_text">認証あり</string>

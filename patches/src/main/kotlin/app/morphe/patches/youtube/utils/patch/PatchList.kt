@@ -281,6 +281,10 @@ internal enum class PatchList(
         "Swipe controls",
         "Adds options for controlling volume and brightness with swiping, and whether to enter fullscreen when swiping down below the player."
     ),
+    TEXT_TRANSLATION(
+        "Translate comments and descriptions",
+        "Adds options to automatically translate comments and video descriptions, and to copy their text."
+    ),
     THEME(
         "Theme",
         "Adds options to change the app's themes and splash screen style."

@@ -86,6 +86,7 @@
 | `Swipe controls` | Adds options for controlling volume and brightness with swiping, and whether to enter fullscreen when swiping down below the player. | 21.13.164 ~ 20.05.46 |
 | `Theme` | Adds options to change the app's themes and splash screen style. | 21.13.164 ~ 20.05.46 |
 | `Toolbar components` | Adds options to hide or change components located on the toolbar, such as the search bar, header, and toolbar buttons. | 21.13.164 ~ 20.05.46 |
+| `Translate comments and descriptions` | Adds options to automatically translate comments and video descriptions, and to copy their text. | 21.13.164 ~ 20.05.46 |
 | `Translations for YouTube` | Add translations or remove string resources. | 21.13.164 ~ 20.05.46 |
 | `Video playback` | Adds options to customize settings related to video playback, such as default video quality and playback speed. | 21.13.164 ~ 20.05.46 |
 | `Visual preferences icons for YouTube` | Adds icons to specific preferences in the settings. | 21.13.164 ~ 20.05.46 |

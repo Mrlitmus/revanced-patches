@@ -1,0 +1,43 @@
+name: Build (fork)
+
+# Builds the patches bundle on this fork. The upstream workflows only run for the
+# `anddea` owner, so this one has no owner condition.
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - "feat/**"
+
+permissions:
+  contents: read
+  packages: read
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '21'
+
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@v4
+
+      - name: Build
+        env:
+          # A personal access token with `read:packages` can be stored as the GPR_TOKEN
+          # secret if the default token cannot read the MorpheApp registry.
+          GITHUB_TOKEN: ${{ secrets.GPR_TOKEN != '' && secrets.GPR_TOKEN || secrets.GITHUB_TOKEN }}
+        run: ./gradlew :patches:buildAndroid --no-daemon
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: patches
+          path: patches/build/libs

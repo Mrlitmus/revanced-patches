@@ -577,6 +577,14 @@ public class Settings extends SharedYouTubeSettings {
     public static final BooleanSetting HIDE_COMMENTS_THANKS_BUTTON = new BooleanSetting("revanced_hide_comments_thanks_button", FALSE, true);
     public static final BooleanSetting SANITIZE_COMMENTS_CATEGORY_BAR = new BooleanSetting("revanced_sanitize_comments_category_bar", FALSE);
 
+    // PreferenceScreen: Player - Translate comments and descriptions
+    public static final BooleanSetting TEXT_TRANSLATION_COMMENTS = new BooleanSetting("revanced_text_translation_comments", FALSE);
+    public static final BooleanSetting TEXT_TRANSLATION_COMMENTS_SHOW_ORIGINAL = new BooleanSetting("revanced_text_translation_comments_show_original", FALSE, parent(TEXT_TRANSLATION_COMMENTS));
+    public static final BooleanSetting TEXT_TRANSLATION_DESCRIPTION = new BooleanSetting("revanced_text_translation_description", FALSE);
+    public static final BooleanSetting TEXT_TRANSLATION_DESCRIPTION_SHOW_ORIGINAL = new BooleanSetting("revanced_text_translation_description_show_original", TRUE, parent(TEXT_TRANSLATION_DESCRIPTION));
+    public static final StringSetting TEXT_TRANSLATION_TARGET_LANGUAGE = new StringSetting("revanced_text_translation_target_language", "app", parentsAny(TEXT_TRANSLATION_COMMENTS, TEXT_TRANSLATION_DESCRIPTION));
+    public static final BooleanSetting TEXT_TRANSLATION_COPY_BUTTON = new BooleanSetting("revanced_text_translation_copy_button", TRUE);
+
     // PreferenceScreen: Player - Flyout menu
     public static final BooleanSetting CHANGE_PLAYER_FLYOUT_MENU_TOGGLE = new BooleanSetting("revanced_change_player_flyout_menu_toggle", FALSE, true);
     public static final BooleanSetting HIDE_PLAYER_FLYOUT_MENU_ENHANCED_BITRATE = new BooleanSetting("revanced_hide_player_flyout_menu_enhanced_bitrate", FALSE, true);

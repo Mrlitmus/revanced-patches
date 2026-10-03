@@ -1998,6 +1998,8 @@ To show the native playlist download button, turn on \'Spoof app version\' and c
     <string name="revanced_preference_screen_snack_bar_summary">Hide or change snack bar related components</string>
     <string name="revanced_preference_screen_snack_bar_title">Snack bar</string>
     <string name="revanced_preference_screen_swipe_controls_title">Swipe controls</string>
+    <string name="revanced_preference_screen_text_translation_summary">Automatically translate comments and video descriptions, and add a copy button</string>
+    <string name="revanced_preference_screen_text_translation_title">Translate comments and descriptions</string>
     <string name="revanced_preference_screen_toolbar_summary">Hide or change toolbar components, such as the header, search bar, and toolbar buttons</string>
     <string name="revanced_preference_screen_toolbar_title">Toolbar</string>
     <string name="revanced_preference_screen_video_description_summary">Hide or show video description components</string>
@@ -2739,6 +2741,32 @@ Adjust volume by swiping vertically on the right side of the screen"</string>
     <string name="revanced_switch_create_with_notifications_button_summary_on">Create button is switched with Notifications button</string>
     <string name="revanced_switch_create_with_notifications_button_title">Swap Create and Notifications buttons</string>
     <string name="revanced_switch_create_with_notifications_button_user_dialog_message">If this setting do not take effect, try switching to Incognito mode</string>
+    <string name="revanced_text_translation_about_summary">"Text is translated with the public Google Translate endpoint, so a network connection is required
+
+The source language is detected automatically, and text that is already in the target language is left as is
+
+A tappable Copy link is added below translated and long texts"</string>
+    <string name="revanced_text_translation_about_title">About translation</string>
+    <string name="revanced_text_translation_comments_show_original_summary_off">Only the translation is shown. Tap \'Original\' to view the original text</string>
+    <string name="revanced_text_translation_comments_show_original_summary_on">The original text is shown above the translation</string>
+    <string name="revanced_text_translation_comments_show_original_title">Show original comment too</string>
+    <string name="revanced_text_translation_comments_summary_off">Comments are shown as posted</string>
+    <string name="revanced_text_translation_comments_summary_on">Comments in other languages are shown translated</string>
+    <string name="revanced_text_translation_comments_title">Translate comments</string>
+    <string name="revanced_text_translation_copied">Text copied to clipboard</string>
+    <string name="revanced_text_translation_copy">Copy</string>
+    <string name="revanced_text_translation_copy_button_summary_off">Copy link is hidden</string>
+    <string name="revanced_text_translation_copy_button_summary_on">A Copy link is shown below translated and long texts</string>
+    <string name="revanced_text_translation_copy_button_title">Show copy link</string>
+    <string name="revanced_text_translation_description_show_original_summary_off">Only the translation is shown. Tap \'Original\' to view the original text</string>
+    <string name="revanced_text_translation_description_show_original_summary_on">The original text is shown above the translation, so links and timestamps keep working</string>
+    <string name="revanced_text_translation_description_show_original_title">Show original description too</string>
+    <string name="revanced_text_translation_description_summary_off">Descriptions are shown as posted</string>
+    <string name="revanced_text_translation_description_summary_on">Descriptions in other languages are shown translated</string>
+    <string name="revanced_text_translation_description_title">Translate video description</string>
+    <string name="revanced_text_translation_original_dialog_title">Original text</string>
+    <string name="revanced_text_translation_show_original">Original</string>
+    <string name="revanced_text_translation_target_language_title">Target language</string>
     <string name="revanced_transcript_cookies_about_summary">Click to see how to get Cookies</string>
     <string name="revanced_transcript_cookies_about_title">About Transcript Cookies</string>
     <string name="revanced_transcript_cookies_dialog_auth_text">Auth</string>

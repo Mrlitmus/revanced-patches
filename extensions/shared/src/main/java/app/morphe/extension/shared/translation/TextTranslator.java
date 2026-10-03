@@ -79,6 +79,105 @@ public final class TextTranslator {
     }
 
     /**
+     * Result of {@link #detectAndTranslate(String, String)}: the translated text and the
+     * language Google detected for the source text.
+     */
+    public static final class DetectedTranslation {
+        @NonNull
+        public final String translated;
+        /** ISO 639 language code such as {@code en}, or an empty string when unknown. */
+        @NonNull
+        public final String sourceLanguage;
+
+        DetectedTranslation(@NonNull String translated, @NonNull String sourceLanguage) {
+            this.translated = translated;
+            this.sourceLanguage = sourceLanguage;
+        }
+    }
+
+    /**
+     * Translates a single text and also returns the language Google detected for it,
+     * so callers can tell whether the text was already in the target language.
+     * Always call off the main thread.
+     *
+     * @param targetLanguage Language code such as {@code ja}.
+     */
+    @NonNull
+    public static DetectedTranslation detectAndTranslate(@NonNull String text, @NonNull String targetLanguage)
+            throws Exception {
+        Utils.verifyOffMainThread();
+
+        String body = "q=" + URLEncoder.encode(text, "UTF-8");
+        String url = GOOGLE_TRANSLATE_URL + targetLanguage;
+
+        Exception lastFailure = null;
+        for (int attempt = 0; attempt < MAX_ATTEMPTS; attempt++) {
+            if (attempt > 0) {
+                sleepQuietly(INITIAL_BACKOFF_MILLISECONDS * attempt);
+            }
+
+            HttpURLConnection connection = null;
+            try {
+                connection = Requester.openConnection(url);
+                connection.setRequestMethod("POST");
+                connection.setConnectTimeout(CONNECT_TIMEOUT_MILLISECONDS);
+                connection.setReadTimeout(READ_TIMEOUT_MILLISECONDS);
+                connection.setRequestProperty("Content-Type", "application/x-www-form-urlencoded");
+                connection.setRequestProperty("User-Agent", "Mozilla/5.0");
+                connection.setDoOutput(true);
+
+                byte[] payload = body.getBytes(StandardCharsets.UTF_8);
+                connection.setFixedLengthStreamingMode(payload.length);
+                try (OutputStream stream = connection.getOutputStream()) {
+                    stream.write(payload);
+                }
+
+                final int code = connection.getResponseCode();
+                if (code == 200) {
+                    // Response: [[["translated","original",null,null,...],...],null,"src_lang",...]
+                    JSONArray root = new JSONArray(Requester.parseString(connection));
+                    JSONArray sentences = root.getJSONArray(0);
+                    StringBuilder result = new StringBuilder();
+                    for (int i = 0, length = sentences.length(); i < length; i++) {
+                        JSONArray sentence = sentences.getJSONArray(i);
+                        String part = sentence.optString(0);
+                        if (!"null".equals(part)) {
+                            result.append(part);
+                        }
+                    }
+                    String sourceLanguage = root.optString(2);
+                    if ("null".equals(sourceLanguage)) {
+                        sourceLanguage = "";
+                    }
+                    return new DetectedTranslation(result.toString(), sourceLanguage);
+                }
+
+                String response = Requester.parseErrorString(connection);
+                String responseStart = response.substring(0,
+                        Math.min(response.length(), MAXIMUM_ERROR_CHARACTERS));
+                TranslationHttpException httpFailure = new TranslationHttpException(code,
+                        "Translation HTTP status: " + code + " response: " + responseStart);
+                if (!isRetryable(code) || attempt == MAX_ATTEMPTS - 1) {
+                    throw httpFailure;
+                }
+                lastFailure = httpFailure;
+            } catch (IOException ex) {
+                if (attempt == MAX_ATTEMPTS - 1) {
+                    throw ex;
+                }
+                lastFailure = ex;
+            } finally {
+                if (connection != null) {
+                    connection.disconnect();
+                }
+            }
+        }
+
+        throw lastFailure != null ? lastFailure : new IOException(
+                "Translation failed after " + MAX_ATTEMPTS + " attempts");
+    }
+
+    /**
      * Splits lines into batches that each stay within {@link #MAXIMUM_BATCH_CHARACTERS}.
      * A single line longer than the budget is kept in a batch of its own.
      *
