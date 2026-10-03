@@ -17,6 +17,10 @@ internal enum class PatchList(
         "Ambient mode control",
         "Adds options to disable Ambient mode and to bypass Ambient mode restrictions."
     ),
+    AUTO_TRANSLATE_CAPTIONS(
+        "Auto-translate captions",
+        "Adds an option to show captions auto-translated into a chosen language, regardless of the languages offered by the auto-translate menu."
+    ),
     BYPASS_IMAGE_REGION_RESTRICTIONS(
         "Bypass image region restrictions",
         "Adds an option to use a different host for static images, so that images blocked in some countries can be received."

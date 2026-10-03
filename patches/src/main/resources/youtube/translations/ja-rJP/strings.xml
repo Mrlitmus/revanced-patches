@@ -435,6 +435,17 @@ DeArrow について詳しく知るには、ここをタップしてください
     <string name="revanced_bypass_url_redirects_summary_on">URL リダイレクト (youtube.com/redirect) をバイパスします。</string>
     <string name="revanced_bypass_url_redirects_title">URL リダイレクトをバイパス</string>
     <string name="revanced_cancel">キャンセル</string>
+    <string name="revanced_caption_translation_about_summary">"字幕をオンにして「英語（自動生成）」などの任意のトラックを選ぶと、翻訳先の言語で表示されます。翻訳は YouTube 側で行われるため、メニューには元の言語名が表示されたままになることがあります。
+
+翻訳済み字幕が読み込まれない場合、YouTube 側で翻訳字幕にログインが必要になっている可能性があります。その場合はこの画面の「Transcript Cookie を設定」を有効にしてください。"</string>
+    <string name="revanced_caption_translation_about_title">字幕の自動翻訳について</string>
+    <string name="revanced_caption_translation_enabled_summary_off">選択した字幕トラックの言語のまま表示します。</string>
+    <string name="revanced_caption_translation_enabled_summary_on">他の言語の字幕を翻訳先の言語に翻訳して表示します。</string>
+    <string name="revanced_caption_translation_enabled_title">字幕を自動翻訳</string>
+    <string name="revanced_caption_translation_keep_manual_choice_summary_off">常に翻訳先の言語に翻訳します。</string>
+    <string name="revanced_caption_translation_keep_manual_choice_summary_on">自動翻訳メニューで選んだ言語はそのまま使います。</string>
+    <string name="revanced_caption_translation_keep_manual_choice_title">自動翻訳メニューの選択を優先</string>
+    <string name="revanced_caption_translation_target_language_title">翻訳先の言語</string>
     <string name="revanced_change_form_factor_entry_1">デフォルト</string>
     <string name="revanced_change_form_factor_entry_2">スマホ</string>
     <string name="revanced_change_form_factor_entry_3">スマホ (最大 480 dp)</string>
@@ -1920,6 +1931,8 @@ API キーを取得するには、ここをタップしてください。"</stri
     <string name="revanced_preference_screen_alt_thumbnails_title">代替サムネイル</string>
     <string name="revanced_preference_screen_ambient_mode_summary">アンビエントモードの制限を回避またはアンビエントモードを無効にします。</string>
     <string name="revanced_preference_screen_ambient_mode_title">アンビエントモード</string>
+    <string name="revanced_preference_screen_caption_translation_summary">字幕を自分の言語に自動翻訳して表示します。</string>
+    <string name="revanced_preference_screen_caption_translation_title">字幕を自動翻訳</string>
     <string name="revanced_preference_screen_carousel_shelf_summary">ホーム、検索結果、登録チャンネルにあるおすすめ欄を非表示または表示します。</string>
     <string name="revanced_preference_screen_carousel_shelf_title">おすすめ欄</string>
     <string name="revanced_preference_screen_category_bar_summary">フィード、検索、関連動画からカテゴリバー ([すべて]、[ゲーム]、[音楽] など) を非表示または表示します。</string>

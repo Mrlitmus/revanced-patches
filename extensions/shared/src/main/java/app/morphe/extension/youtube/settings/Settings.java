@@ -375,6 +375,9 @@ public class Settings extends SharedYouTubeSettings {
     public static final BooleanSetting SET_TRANSCRIPT_COOKIES = new BooleanSetting("revanced_set_transcript_cookies", FALSE, true, "revanced_set_transcript_cookies_user_dialog_message");
     public static final BooleanSetting SET_TRANSCRIPT_COOKIES_ALL = new BooleanSetting("revanced_set_transcript_cookies_all", FALSE, true, parent(SET_TRANSCRIPT_COOKIES));
     public static final StringSetting TRANSCRIPT_COOKIES = new StringSetting("revanced_transcript_cookies", "", true, parent(SET_TRANSCRIPT_COOKIES));
+    public static final BooleanSetting CAPTION_TRANSLATION_ENABLED = new BooleanSetting("revanced_caption_translation_enabled", FALSE);
+    public static final StringSetting CAPTION_TRANSLATION_TARGET_LANGUAGE = new StringSetting("revanced_caption_translation_target_language", "app", parent(CAPTION_TRANSLATION_ENABLED));
+    public static final BooleanSetting CAPTION_TRANSLATION_KEEP_MANUAL_CHOICE = new BooleanSetting("revanced_caption_translation_keep_manual_choice", TRUE, parent(CAPTION_TRANSLATION_ENABLED));
 
     public static final EnumSetting<FormFactor> CHANGE_FORM_FACTOR = new EnumSetting<>("revanced_change_form_factor", FormFactor.DEFAULT, true, "revanced_change_form_factor_user_dialog_message");
     public static final BooleanSetting TABLET_LAYOUT_IN_PLAYER = new BooleanSetting("morphe_tablet_layout_in_player", FALSE, true, new TabletLayoutInPlayerAvailability());

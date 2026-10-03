@@ -204,6 +204,14 @@
         <!-- SETTINGS: DISABLE_AUTO_CAPTIONS
         <SwitchPreference android:title="@string/revanced_disable_auto_captions_title" android:key="revanced_disable_auto_captions" android:summaryOn="@string/revanced_disable_auto_captions_summary_on" android:summaryOff="@string/revanced_disable_auto_captions_summary_off" />SETTINGS: DISABLE_AUTO_CAPTIONS -->
 
+        <!-- SETTINGS: AUTO_TRANSLATE_CAPTIONS
+        <PreferenceScreen android:title="@string/revanced_preference_screen_caption_translation_title" android:key="revanced_preference_screen_caption_translation" android:summary="@string/revanced_preference_screen_caption_translation_summary">
+            <SwitchPreference android:title="@string/revanced_caption_translation_enabled_title" android:key="revanced_caption_translation_enabled" android:summaryOn="@string/revanced_caption_translation_enabled_summary_on" android:summaryOff="@string/revanced_caption_translation_enabled_summary_off" />
+            <app.morphe.extension.shared.settings.preference.CustomDialogListPreference android:entries="@array/morphe_vot_caption_language_entries" android:entryValues="@array/morphe_vot_caption_language_entry_values" android:title="@string/revanced_caption_translation_target_language_title" android:key="revanced_caption_translation_target_language" android:dependency="revanced_caption_translation_enabled" />
+            <SwitchPreference android:title="@string/revanced_caption_translation_keep_manual_choice_title" android:key="revanced_caption_translation_keep_manual_choice" android:summaryOn="@string/revanced_caption_translation_keep_manual_choice_summary_on" android:summaryOff="@string/revanced_caption_translation_keep_manual_choice_summary_off" android:dependency="revanced_caption_translation_enabled" />
+            <Preference android:title="@string/revanced_caption_translation_about_title" android:summary="@string/revanced_caption_translation_about_summary" android:selectable="false" />
+        </PreferenceScreen>SETTINGS: AUTO_TRANSLATE_CAPTIONS -->
+
         <!-- SETTINGS: AUTO_CAPTIONS_STYLE
         <app.morphe.extension.shared.settings.preference.CustomDialogListPreference android:entries="@array/revanced_auto_captions_style_entries" android:title="@string/revanced_auto_captions_style_title" android:key="revanced_auto_captions_style" android:entryValues="@array/revanced_auto_captions_style_entry_values" />SETTINGS: AUTO_CAPTIONS_STYLE -->
 
@@ -1324,6 +1332,7 @@
             </PreferenceCategory>
 
             <PreferenceCategory android:title="@string/revanced_preference_screen_misc_title" android:layout="@layout/revanced_settings_preferences_category">
+                <Preference android:title="Auto-translate captions" android:summary="@string/revanced_patches_excluded" android:selectable="false"/>
                 <Preference android:title="Bypass URL redirects" android:summary="@string/revanced_patches_excluded" android:selectable="false"/>
                 <Preference android:title="Change share sheet" android:summary="@string/revanced_patches_excluded" android:selectable="false"/>
                 <Preference android:title="Disable QUIC protocol" android:summary="@string/revanced_patches_excluded" android:selectable="false"/>

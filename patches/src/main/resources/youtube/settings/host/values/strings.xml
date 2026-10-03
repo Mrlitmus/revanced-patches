@@ -458,6 +458,17 @@ Tap and hold to toggle the appended information type"</string>
     <string name="revanced_bypass_url_redirects_summary_on">URL redirects are bypassed</string>
     <string name="revanced_bypass_url_redirects_title">Bypass URL redirects</string>
     <string name="revanced_cancel">Cancel</string>
+    <string name="revanced_caption_translation_about_summary">"Turn on captions and pick any track, such as English (auto-generated). The translation is requested from YouTube, so the menu may still show the original language name
+
+If translated captions do not load, YouTube may currently require sign-in for translated captions. In that case enable \'Set Transcript Cookies\' in this screen"</string>
+    <string name="revanced_caption_translation_about_title">About auto-translated captions</string>
+    <string name="revanced_caption_translation_enabled_summary_off">Captions are shown in the language of the selected track</string>
+    <string name="revanced_caption_translation_enabled_summary_on">Captions in other languages are shown translated into the target language</string>
+    <string name="revanced_caption_translation_enabled_title">Auto-translate captions</string>
+    <string name="revanced_caption_translation_keep_manual_choice_summary_off">Captions are always translated into the target language</string>
+    <string name="revanced_caption_translation_keep_manual_choice_summary_on">A language picked from the auto-translate menu is kept</string>
+    <string name="revanced_caption_translation_keep_manual_choice_title">Respect the auto-translate menu</string>
+    <string name="revanced_caption_translation_target_language_title">Target language</string>
     <string name="revanced_change_form_factor_entry_1">Default</string>
     <string name="revanced_change_form_factor_entry_2">Phone</string>
     <string name="revanced_change_form_factor_entry_3">Phone (Max 480 dp)</string>
@@ -1949,6 +1960,8 @@ To show the native playlist download button, turn on \'Spoof app version\' and c
     <string name="revanced_preference_screen_alt_thumbnails_title">Alternative thumbnails</string>
     <string name="revanced_preference_screen_ambient_mode_summary">Disable Ambient mode or bypass Ambient mode restrictions</string>
     <string name="revanced_preference_screen_ambient_mode_title">Ambient mode</string>
+    <string name="revanced_preference_screen_caption_translation_summary">Show captions auto-translated into your language</string>
+    <string name="revanced_preference_screen_caption_translation_title">Auto-translate captions</string>
     <string name="revanced_preference_screen_carousel_shelf_summary">Hide or show carousel shelf in home, search results, and subscriptions</string>
     <string name="revanced_preference_screen_carousel_shelf_title">Carousel shelf</string>
     <string name="revanced_preference_screen_category_bar_summary">Hide or show category bar in feeds, related videos, search results, and watch history</string>

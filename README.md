@@ -17,6 +17,7 @@
 | `Alternative thumbnails` | Adds options to replace video thumbnails using the DeArrow API or image captures from the video. | 21.13.164 ~ 20.05.46 |
 | `Ambient mode control` | Adds options to disable Ambient mode and to bypass Ambient mode restrictions. | 21.13.164 ~ 20.05.46 |
 | `App refresh rate` | Adds an option to change the app refresh rate. | 21.13.164 ~ 20.05.46 |
+| `Auto-translate captions` | Adds an option to show captions auto-translated into a chosen language, regardless of the languages offered by the auto-translate menu. | 21.13.164 ~ 20.05.46 |
 | `Bypass URL redirects` | Adds an option to bypass URL redirects and open the original URL directly. | 21.13.164 ~ 20.05.46 |
 | `Bypass image region restrictions` | Adds an option to use a different host for static images, so that images blocked in some countries can be received. | 21.13.164 ~ 20.05.46 |
 | `Change form factor` | Adds an option to change the UI appearance to a phone, tablet, or automotive device. | 21.13.164 ~ 20.05.46 |
